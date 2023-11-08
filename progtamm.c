@@ -2,20 +2,23 @@ using System;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.Write("Введите первый символ: ");
-        char ch1 = Console.ReadKey().KeyChar;
-        Console.WriteLine();
+        char ch1 = ' '; // переменная для хранения первого символа
+        char ch2 = ' '; // переменная для хранения второго символа
 
-        Console.Write("Введите второй символ: ");
-        char ch2 = Console.ReadKey().KeyChar;
-        Console.WriteLine();
+        while (true)
+        {
+            Console.WriteLine("Меню выбора:");
+            Console.WriteLine("1. Ввести первый символ");
+            Console.WriteLine("2. Ввести второй символ");
+            Console.WriteLine("3. Вывести каждый символ и его код ASCII");
+            Console.WriteLine("4. Вывести сумму кодов ASCII символов ch1 и ch2");
+            Console.WriteLine("0. Выйти");
 
-        Console.WriteLine($"Код символа {ch1}: {(int)ch1}");
-        Console.WriteLine($"Код символа {ch2}: {(int)ch2}");
+            Console.Write("Выберите пункт меню: ");
+            int choice = Int32.Parse(Console.ReadLine());
 
-        int sum = (int)ch1 + (int)ch2;
-        Console.WriteLine($"Сумма кодов символов {ch1} и {ch2}: {sum}");
+        }
     }
 }
